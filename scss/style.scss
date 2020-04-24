@@ -1,0 +1,95 @@
+$tablet-width: 768px;
+$desktop-width: 1026px;
+$desktop-full: 1600px;
+
+
+@mixin landscape {
+    @media screen and (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (orientation: portrait) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin desktop-full {
+    @media (min-width: #{$desktop-full}) {
+        @content;
+    }
+}
+
+@mixin flex-box() {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+
+.social{
+    @include flex-box();
+    flex-direction: column;
+    position: absolute !important;
+    top: 160px;
+    left: 50px;
+
+    div{
+        border: 2px solid #5DB3FF;
+        padding: 9px 9px;
+        margin: 10px 0;
+        cursor: pointer;
+        @include border-radius(50%);
+        @include flex-box();
+        justify-content: center;
+        
+        &:hover{
+            box-shadow: 0 0 0 8px rgba(93,179,255, 0.6);
+        }
+    }
+
+    @include mobile(){
+        display: none;
+    }
+
+    @include tablet(){
+        display: block;
+    }
+}
+
+
+.certificate-google{
+    position: absolute !important;
+    bottom: 30px;
+    left: 40px;
+    cursor: pointer;
+
+    @include mobile(){
+        display: none;
+    }
+
+    @include tablet(){
+        display: block;
+    }
+}
