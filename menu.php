@@ -13,8 +13,8 @@
     <nav>
 
         <ul class="menu">
-            <li>Home</li>
-            <li>Cursos</li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="curso.php">Cursos</a></li>
             <li>Aulas online</li>
             <li>Agenda</li>
             <li>In company</li>
@@ -47,6 +47,28 @@
     </nav>
 
 </section>
+
+
+<div class="social">
+    <div>
+        <img height="22" src="img/email.svg" alt="Email">
+    </div>
+    <div>
+        <img height="22" src="img/instagram.svg" alt="Instagram">
+    </div>
+    <div>
+        <img height="22" src="img/facebook.svg" alt="Facebook">
+    </div>
+    <div>
+        <img height="22" src="img/whatsapp.svg" alt="Whatsapp">
+    </div>
+</div>
+
+<div class="certificate-google">
+    <a href="https://www.google.com/partners/agency?id=2977243188" target="_blank" rel="noopener noreferrer">
+        <img src="img/certificado-google.png" alt="Certificado do Google">
+    </a>
+</div>
 
 
 <script src="https://apis.google.com/js/platform.js" async defer></script>

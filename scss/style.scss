@@ -51,13 +51,14 @@ $desktop-full: 1600px;
 .social{
     @include flex-box();
     flex-direction: column;
-    position: absolute !important;
+    position: fixed !important;
     top: 160px;
     left: 50px;
+    z-index: 100;
 
     div{
         border: 2px solid #5DB3FF;
-        padding: 9px 9px;
+        padding: 10px 9px;
         margin: 10px 0;
         cursor: pointer;
         @include border-radius(50%);
@@ -65,7 +66,8 @@ $desktop-full: 1600px;
         justify-content: center;
         
         &:hover{
-            box-shadow: 0 0 0 8px rgba(93,179,255, 0.6);
+           box-shadow: 0 0 0 8px rgba(93,179,255, 0.53);
+    
         }
     }
 
@@ -80,10 +82,11 @@ $desktop-full: 1600px;
 
 
 .certificate-google{
-    position: absolute !important;
-    bottom: 30px;
+    position: fixed !important;
+    bottom: 40px;
     left: 40px;
     cursor: pointer;
+    z-index: 100;
 
     @include mobile(){
         display: none;

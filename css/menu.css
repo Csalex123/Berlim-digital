@@ -13,7 +13,7 @@
     position: fixed;
     right: 0;
     top: 0;
-    z-index: 6;
+    z-index: 9999;
 }
 
 #topo .logo {
@@ -145,8 +145,7 @@
     #topo .social-mobile {
         display: none;
     }
-
-    .icon-bar-menu{
+    .icon-bar-menu {
         display: none;
     }
 }
@@ -155,8 +154,7 @@
     #topo nav {
         background-color: #2D2B2D;
     }
-
-    .icon-bar-menu{
+    .icon-bar-menu {
         display: block;
     }
 }
@@ -174,4 +172,25 @@
     #topo .social-mobile li.google-partner {
         padding: 0;
     }
+}
+
+.icon-bar-menu {
+    padding-top: 10px;
+}
+
+.icon-bar-menu .icon-bar {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.icon-bar-menu.icon-bar:nth-child(2) {
+    height: 1.8px;
+}
+
+.icon-bar-menu .icon-bar+.icon-bar {
+    margin-top: 7px;
 }
