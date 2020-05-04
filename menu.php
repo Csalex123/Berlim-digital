@@ -3,7 +3,7 @@
     <!-- <i style="" class="fa fa-bars fa-2x bt-menu"></i> -->
 
 
-    <div padding-top: 10px; class="icon-bar-menu bt-menu">
+    <div class="icon-bar-menu bt-menu">
         <span class="icon-bar"></span>
         <span id="second-icon" class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -15,11 +15,11 @@
         <ul class="menu">
             <li><a href="index.php">Home</a></li>
             <li><a href="curso.php">Cursos</a></li>
-            <li>Aulas online</li>
-            <li>Agenda</li>
-            <li>In company</li>
+            <li><a>Aulas online</a></li>
+            <li><a>Agenda</a></li>
+            <li><a>In company</a></li>
             <li><a class="link-menu" href="https://bresults.berlimdigital.com.br"><span></span>Agência</a></li>
-            <li>Academy</li>
+            <li><a>Academy</a></li>
         </ul>
 
         <div class="social-mobile">

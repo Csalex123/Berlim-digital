@@ -47,137 +47,155 @@ $desktop-full: 1600px;
 }
 
 body {
-    // height:100vh;
     background-color: #1c161a;
-    // overflow: hidden;
 }
 
 main {
-    @include flex-box();
-    flex-direction: column;
+    display: flex; 
     justify-content: center;
-    align-items: center;
 
-    // padding: 0 150px;
-
-    @include mobile() {
-        margin-top: 25%;
-    }
-
-    @include tablet() {
-        margin-top: 15%;
-    }
-
-    @include desktop() {
-        margin-top: 10%;
-    }
-
-    .header {
+    .container-principal {
         @include flex-box();
-        justify-content: space-between;
-        align-items: center;
-
-        .titulo {
-            font: {
-                weight: bold;
-                style: oblique;
-                size: 1.22em;
-            }
-        }
-
-        button {
-            background-color: transparent;
-            border: 1px solid #5db3ff;
-            padding: 0 20px;
-            margin: 5px;
-            cursor: pointer;
-            font-size: 15px;
-            @include border-radius(10px);
-
-            &:hover {
-                background-color: #5db3ff;
-                color: black;
-            }
-        }
+        flex-direction: column;
 
         @include mobile() {
-            flex-direction: column;
+            margin-top: 25%;
         }
 
         @include tablet() {
-            flex-direction: column;
+            margin-top: 15%;
         }
 
         @include desktop() {
-            max-width: 870px;
+            margin-top: 10%;
         }
 
-        @include desktop-full() {
-            max-width: 1200px;
-        }
-    }
-
-    .cursos {
-        @include flex-box();
-        flex-wrap: wrap;
-        padding: 20px 0;
-
-        div {
-            margin: 3px 3px;
-            border: 2px solid #1c161a;
-            cursor: pointer;
-            @include border-radius(5px);
-            height: 190px;
-            min-width: 280px;
-
-            &:hover{
-                border: 2px solid #5DB3FF;
+        .header {
+            @include flex-box();
+            justify-content: space-between;
+            align-items: center;
+        
+            @include mobile(){
+                padding: 0 0;
             }
 
-            // @include desktop() {
-            
-            // }
+            @include tablet(){
+                padding: 0 30px;
+            }
 
-            // @include desktop-full() {
-            //     height: 210px;
-            //     min-width: 340px;
-            // }
+            @include desktop(){
+                padding: 0 0px;
+            }
 
-            img{
-                float: right;
-                margin-top: 50%;
-                padding: 10px;
-                height: 32px;
+            .titulo {
+                font: {
+                    weight: bold;
+                    style: oblique;
+                    size: 1.22em;
+                }
+            }
+
+            button {
+                background-color: transparent;
+                border: 1px solid #5db3ff;
+                padding: 0 20px;
+                margin: 5px;
+                cursor: pointer;
+                font-size: 15px;
+                @include border-radius(10px);
+
+                &:hover {
+                    background-color: #5db3ff;
+                    color: black;
+                }
+            }
+
+            @include mobile() {
+                flex-direction: column;
+            }
+
+            @include tablet() {
+                flex-direction: row;
+            }
+
+            @include desktop() {
+                max-width: 870px;
+            }
+
+            @include desktop-full() {
+                max-width: 1200px;
             }
         }
 
-        @include mobile() {
-            justify-content: center;
-        }
+        .cursos {
+            @include flex-box();
+            flex-wrap: wrap;
+            padding: 20px 0;
 
-        @include desktop() {
-            max-width: 870px;
-            justify-content: start;
-        }
+            div {
+                margin: 3px 3px;
+                border: 2px solid #1c161a;
+                cursor: pointer;
+                @include border-radius(5px);
+                height: 190px;
+                min-width: 280px;
 
-        @include desktop-full() {
-            max-width: 1200px;
+                @include desktop-full(){
+                    height: 230px;
+                    min-width: 383px;
+                }
+
+                &:hover {
+                    border: 2px solid #5db3ff;
+                }
+    
+
+                img {
+                    float: right;
+                    padding: 10px;
+                    height: 32px;
+
+                    @include desktop() {
+                        margin-top: 50%;
+                    }
+
+                    @include desktop-full() {
+                        margin-top: 47%;
+                    }
+                }
+            }
+
+            @include mobile() {
+                justify-content: center;
+            }
+
+            @include desktop() {
+                max-width: 870px;
+                justify-content: start;
+            }
+
+            @include desktop-full() {
+                max-width: 1200px;
+            }
         }
     }
 }
 
-
-footer{
+footer {
     padding: 0 50px;
-    bottom: 0;
 
-    @include mobile(){
+    @include tablet() {
         position: relative;
+        text-align: start;
+    }
+
+    @include mobile() {
         text-align: center;
     }
 
-    @include tablet(){
-        position: absolute;
+    @include desktop-full(){
+        bottom: 0;
+        position: relative;
         text-align: start;
     }
 }
