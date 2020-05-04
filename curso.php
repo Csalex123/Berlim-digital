@@ -42,21 +42,6 @@
                 <div style="background: url('img/foto3.png'); background-position: center; background-size: cover;">
                     <img src="img/curso-disponivel.svg">
                 </div>
-                <div style="background: url('img/foto3.png'); background-position: center; background-size: cover;">
-                    <img src="img/curso-disponivel.svg">
-                </div>
-                <div style="background: url('img/foto3.png'); background-position: center; background-size: cover;">
-                    <img src="img/curso-disponivel.svg">
-                </div>
-                <div style="background: url('img/foto3.png'); background-position: center; background-size: cover;">
-                    <img src="img/curso-disponivel.svg">
-                </div>
-                <div style="background: url('img/foto3.png'); background-position: center; background-size: cover;">
-                    <img src="img/curso-disponivel.svg">
-                </div>
-                <div style="background: url('img/foto3.png'); background-position: center; background-size: cover;">
-                    <img src="img/curso-disponivel.svg">
-                </div>
                 <div style="background: url('img/foto1.png'); background-position: center; background-size: cover;"></div>
                 <div style="background: url('img/foto2.png'); background-position: center; background-size: cover;"></div>
             </div>

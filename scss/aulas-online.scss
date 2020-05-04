@@ -1,0 +1,344 @@
+$tablet-width: 768px;
+$desktop-width: 1026px;
+$desktop-full: 1600px;
+
+$colorDefault: #5db3ff;
+
+@mixin landscape {
+    @media screen and (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (orientation: portrait) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin desktop-full {
+    @media (min-width: #{$desktop-full}) {
+        @content;
+    }
+}
+
+@mixin flex-box() {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1c161a;
+}
+
+header {
+    margin-top: 90px;
+    width: 100%;
+
+    background-image: url("../img/capa.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include mobile() {
+        height: 200px;
+    }
+
+    @include tablet() {
+        height: 400px;
+    }
+
+    div {
+        @include mobile() {
+            padding: 10% 0 0 15%;
+        }
+
+        @include tablet() {
+            padding: 10% 0 0 15%;
+        }
+
+        @include desktop() {
+            padding: 10% 0 0 10%;
+        }
+
+        span {
+            background-color: #1c161a;
+            color: $colorDefault;
+            padding: 2px 3px;
+        }
+
+        h2 {
+            max-width: 700px;
+            padding: 0 5px;
+            text-transform: uppercase;
+            text-shadow: 0px 3px 6px #00000029;
+            opacity: 1;
+            font: {
+                weight: bold;
+                style: oblique;
+            }
+
+            @include mobile() {
+                font-size: 33px;
+            }
+
+            @include tablet() {
+                font-size: 55px;
+            }
+        }
+    }
+}
+
+main {
+    @include flex-box();
+    justify-content: center;
+
+    .flex-main {
+        @include flex-box();
+        justify-content: space-between;
+        flex: wrap;
+        width: 1450px;
+
+        @include mobile() {
+            justify-content: center;
+            flex-direction: column;
+            padding: 20px 15px;
+            align-items: center;
+        }
+
+        @include tablet() {
+            justify-content: space-between;
+            flex-direction: row;
+            padding: 50px 30px;
+            align-items: start;
+        }
+
+        div {
+            flex: 2;
+
+            @include desktop() {
+                padding: 80px 70px;
+            }
+
+            @include desktop-full() {
+                padding: 80px 0px;
+            }
+        }
+
+        div + div {
+            flex: 1;
+        }
+
+        h2 {
+            text-transform: uppercase;
+            font: {
+                size: 35px;
+                weight: bold;
+                style: italic;
+            }
+        }
+
+        span {
+            color: $colorDefault;
+            font: {
+                weight: bold;
+                size: 20px;
+            }
+        }
+
+        p {
+            padding-top: 20px;
+            max-width: 600px;
+        }
+
+        button {
+            float: right;
+            padding: 6px 70px;
+            color: black;
+            @include border-radius(26px);
+            border: 2px solid transparent;
+            background-color: #5db3ff;
+            cursor: pointer;
+            outline: none;
+
+            font: {
+                size: 18px;
+                weight: 500;
+            }
+
+            &:hover {
+                border: 2px solid white;
+            }
+
+            @include mobile() {
+                margin-top: 25px;
+            }
+        }
+    }
+}
+
+.conteudo {
+    display: flex;
+    justify-content: center;
+
+    .container-principal {
+        @include flex-box();
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20px;
+
+        @include mobile() {
+            padding: 0;
+        }
+
+        @include tablet() {
+            padding: 0;
+        }
+
+        @include desktop() {
+            padding: 0 100px;
+        }
+
+        .header {
+            @include mobile() {
+                padding: 0 0;
+            }
+
+            @include tablet() {
+                padding: 0 30px;
+            }
+
+            @include desktop() {
+                padding: 0 0px;
+            }
+
+            .titulo {
+                text-transform: uppercase;
+                padding: 0 5px;
+                font: {
+                    size: 22px;
+                    weight: bold;
+                    style: italic;
+                }
+
+                @include mobile() {
+                    text-align: start;
+                    font-size: 16px;
+                }
+
+                @media (max-width: 1024px) {
+                    text-align: center;
+                }
+            }
+        }
+
+        .informacoes {
+            @include flex-box();
+            flex-wrap: wrap;
+            padding: 20px 0;
+
+            div {
+                margin: 3px 3px;
+                border: 2px solid #1c161a;
+                @include border-radius(5px);
+                height: 230px;
+                background-color: #2d2b2d;
+
+                @include mobile() {
+                    min-width: 280px;
+                }
+
+                @include desktop() {
+                    min-width: 380px;
+                }
+
+                @include desktop-full() {
+                    height: 270px;
+                    min-width: 460px;
+                }
+
+                p {
+                    color: #5db3ff;
+                    padding: 20px 10px 10px 15px;
+
+                    font: {
+                        size: 17px;
+                        weight: bold;
+                    }
+                }
+
+                ul {
+                    margin-left: -22px;
+
+                    li {
+                        @include mobile() {
+                            max-width: 320px;
+                        }
+
+                        @include desktop() {
+                            max-width: 340px;
+                        }
+                    }
+                }
+            }
+
+            @include mobile() {
+                justify-content: center;
+            }
+
+            @include desktop() {
+                max-width: 1400px;
+                justify-content: center;
+            }
+
+            @include desktop-full() {
+                max-width: 1400px;
+                justify-content: start;
+            }
+        }
+    }
+}
+
+footer {
+    padding: 0 50px;
+    position: relative;
+    bottom: 0;
+
+    @include tablet() {
+        text-align: start;
+    }
+
+    @include mobile() {
+        text-align: center;
+    }
+
+    @include desktop-full() {
+        text-align: start;
+    }
+}

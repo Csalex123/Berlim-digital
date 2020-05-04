@@ -15,7 +15,7 @@
         <ul class="menu">
             <li><a href="index.php">Home</a></li>
             <li><a href="curso.php">Cursos</a></li>
-            <li><a>Aulas online</a></li>
+            <li><a href="aulas-online.php">Aulas online</a></li>
             <li><a>Agenda</a></li>
             <li><a>In company</a></li>
             <li><a class="link-menu" href="https://bresults.berlimdigital.com.br"><span></span>Agência</a></li>

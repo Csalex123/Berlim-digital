@@ -109,6 +109,14 @@
     justify-content: center;
 }
 
+@media (orientation: portrait){
+
+    #topo .social-mobile .md-social {
+        padding: 13px 25px;
+    }
+
+}
+
 #topo .social-mobile div.google-partner {
     height: auto;
     margin: 10px 5px 0 5px;
@@ -164,7 +172,7 @@
 @media (max-width: 1279px) {
     #topo nav {
         background-color: #2D2B2D;
-        margin-top: 33px;
+        margin-top: 10px;
     }
     .icon-bar-menu {
         display: block;
